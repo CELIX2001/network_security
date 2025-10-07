@@ -5,12 +5,12 @@
 Command: ip a 
 
 **Screenshot:**
-![Question 1](images/1.1.png)
+![Step 1](images/1.1.png)
 
 Command: ifconfig 
 
 **Screenshot:**
-![Question 1](images/1.2.png)
+![Step 1](images/1.2.png)
 
 Purpose: This command displays all network interfaces and their associated IP addresses on your server. Knowing which interfaces are active and their IP addresses helps you understand your server's network configuration.
 
@@ -23,7 +23,7 @@ Tool Explanation: ip a and ifconfig are utilities that provide detailed informat
 Command: sudo netstat -tuln or ss -tuln 
 
 **Screenshot:**
-![Question 2](images/2.png)
+![Step 2](images/2.png)
 
 Purpose: Lists all open ports on the server along with the services listening on them. This helps you identify unnecessary open ports that could be potential entry points for attackers.
 
@@ -37,7 +37,7 @@ the output to show only TCP (t) and UDP (u) ports in listening (l) state without
 Command: sudo lsof -i -P -n 
 
 **Screenshot:**
-![Question 3](images/3.png)
+![Step 3](images/3.png)
 
 Purpose: Lists all open network connections, which can help you identify unexpected or unauthorized connections to your server.
 
@@ -50,7 +50,7 @@ Tool Explanation: lsof stands for 'list open files'. With the -i flag, it lists 
 Command: sudo nmap -sS -O localhost
 
 **Screenshot:**
-![Question 4](images/4.png)
+![Step 4](images/4.png)
 
 Purpose: Scans your server to identify open ports, running services, and the operating system. This can help you discover services that are unintentionally exposed.
 
@@ -63,10 +63,10 @@ Tool Explanation: Nmap (Network Mapper) is a powerful network scanning tool used
 Command: sudo nmap -sP 192.168.1.0/24
 
 **Screenshot:**
-![Question 5](images/5.1.png) 
+![Step 5](images/5.1.png) 
 
 **Screenshot:**
-![Question 5](images/5.2.png) 
+![Step 5](images/5.2.png) 
 
 Purpose: Identifies all live hosts on your local network. This helps you understand the devices present in your network and ensures there are no unauthorized devices connected.
 
@@ -79,7 +79,7 @@ Tool Explanation: The -sP option in Nmap is a Ping Scan, which discovers which h
 Command: sudo nmap -sV localhost
 
 **Screenshot:**
-![Question 6](images/6.png)
+![Step 6](images/6.png)
 
 Purpose: Scans for open ports and attempts to determine the service and version running on each port. This helps identify outdated or vulnerable software that might need updating.
 
@@ -93,7 +93,7 @@ information about the services running on open ports.
 Command: sudo nmap --script vuln localhost
 
 **Screenshot:**
-![Question 7](images/7.png)
+![Step 7](images/7.png)
 
 Purpose: Uses Nmap's vulnerability scanning scripts to identify known vulnerabilities on theserver. This step is useful for finding common security issues in installed software.
 
@@ -106,7 +106,7 @@ Tool Explanation: Nmap has a scripting engine that allows for a wide range of sc
 Command: sudo tcpdump -i eth0
 
 **Screenshot:**
-![Question 8](images/8.png)
+![Step 8](images/8.png)
 
 Purpose: Monitors network traffic on a specific interface (e.g., eth0). This is helpful to observe real-time traffic and detect suspicious activities or anomalies.
 
@@ -119,7 +119,7 @@ Tool Explanation: tcpdump is a packet analyzer that captures and displays packet
 Command: sudo watch -n 1 netstat -tulnp
 
 **Screenshot:**
-![Question 9](images/9.png)
+![Step 9](images/9.png)
 
 Purpose: Continuously monitors network connections, updating every second (-n 1). This helps in real-time observation of network activities, such as new connections or services starting.
 
@@ -132,7 +132,7 @@ Tool Explanation: watch runs a specified command at regular intervals. In this c
 Command: sudo ufw status verbose
 
 **Screenshot:**
-![Question 10](images/10.png)
+![Step 10](images/10.png)
 
 Purpose: Displays the current firewall rules configured on your server, showing which ports and services are allowed or blocked. This helps ensure that only necessary ports are open.
 
