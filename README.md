@@ -11,3 +11,4 @@ This repository showcases the network security lab projects of Celix Technologie
 
 - [Uncomplicated Firewall Lab] 
 
+- [Snort Intrusion Detection Setup]
